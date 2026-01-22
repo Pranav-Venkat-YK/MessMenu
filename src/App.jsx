@@ -21,11 +21,11 @@ function App() {
       breakfast:["Upma","Shira","Chutney","Bread","Butter","Jam","Tea/Coffee","Milk With Bournvita","Banana","Sprout"],      
       lunch:["MethiPuri","Rice (Boiled & White)","Sambar","Aloo Shimla","Kabuli Channa Masala","Dal fry","Salad","Curd","Icecream (Chocolate)"],      
       snacks:["Veg Cutlet","Sauce","Bread","Butter","Jam","Tea/Coffee"],
-      dinner:["Chapathi","Rice (White & Boiled)","TomatoRice","Aloo Mutter Masala","Rasam","Curd","Salad","Dal","Paneer Hyderabadi"]
+      dinner:["Chapathi","Rice (White & Boiled)","TomatoRice","Aloo Mutter Masala","Rasam","Curd","Salad","Dal","Paneer Chilli"]
     },
     Thursday:{
       breakfast:["Onion Uthappam","Set Dosa","Chutney","Bread","Butter","Jam","Tea/Coffee","Milk With Bournvita","Fruits"],
-      lunch:["Chapathi","Rice (White & Boiled)","Veg Chawli Masala","Dal Khichidi","Pakoda Kadi","Pickle","Papad"],
+      lunch:["Chapathi","Rice (White & Boiled)","Mix Pulse Gravy","Dal Khichidi","Pakoda Kadi","Pickle","Papad"],
       snacks:["Hakka Noodels","Bread","Butter","Jam","Tea/Coffee"],
       dinner:["Chapathi","Rice (White & Boiled)","Gobi dry","Dal Tadka","Kasrn","Black Chana Masala","Curd","Papad","Laddu"]
     },
