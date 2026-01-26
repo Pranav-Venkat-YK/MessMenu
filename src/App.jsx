@@ -6,46 +6,46 @@ function App() {
   const [time,setTime] = useState()
   const messmenu = {
     Monday:{
-      breakfast:["Idli","Vada","Chutney","Sambar","Bread","Butter","Jam","Tea/Coffee","Milk with Bournvita","Banana"],
-      lunch:["Chapati","Rice (White & Boiled)","Dal Tadka","Sambar","Cabbage dry","Mix Pulses gravy","Curd","Salad","Ice cream"],
+      breakfast:["Idli","Vada","Chutney","Sambar","Banana","Bread","Butter","Jam","Tea/Coffee","Milk with Bournvita"],
+      lunch:["Chapati","Mix Pulses gravy","Cabbage dry","Rice (White & Boiled)","Dal Tadka","Sambar","Curd","Salad","Ice cream"],
       snacks:["Vada Pav","Green Chutney","Bread","Butter","Jam","Tea/Coffee"],
-      dinner:["Chapati","Rice (white & Boiled)","Lemon Rice","Veg dry","Dal Fry","Paneer Do Pyaza","Rasam","Curd","Salad"]
+      dinner:["Chapati","Paneer Do Pyaza","Veg dry","Lemon Rice","Rice (white & Boiled)","Dal Fry","Rasam","Curd","Salad"]
     },
     Tuesday:{
-      breakfast:["Puri","Bhaji","Bread","Butter","Jam","Tea/Coffee","Milk with Bournvita","Sprout","Fruits"],
-      lunch:["Chapathi","Veg pulao","Rice (white & Boiled)","Veg Dal","Sambar","Beetroot Palya","Rajma masala","Curd","Salad","Gulab jamun"],
-      snacks:["Veg Sevai Upma","Chutney","Bread","Butter","Jam","Tea/Coffee"],
-      dinner:["Chapathi","Rice (White & Boiled)","Akka Masoor Dry","MixVeg Curry","Dal Fry","Curd","Rasam","Salad","Papad"]
+      breakfast:["Puri","Bhaji","Fruits","Bread","Butter","Jam","Tea/Coffee","Milk with Bournvita","Sprout"],
+      lunch:["Chapathi","Beetroot Palya","Rajma masala","Veg pulao","Rice (white & Boiled)","Dal","Sambar","Curd","Salad","Gulab Jamun"],
+      snacks:["Upma","Kesribath","Chutney","Bread","Butter","Jam","Tea/Coffee"],
+      dinner:["Chapathi","Mix Veg Curry","Akka Masoor Dry","Rice (White & Boiled)","Dal Fry","Rasam","Curd","Salad","Papad"]
     },
     Wednesday:{
       breakfast:["Upma","Shira","Chutney","Bread","Butter","Jam","Tea/Coffee","Milk With Bournvita","Banana","Sprout"],      
-      lunch:["MethiPuri","Rice (Boiled & White)","Sambar","Aloo Shimla","Kabuli Channa Masala","Dal fry","Salad","Curd","Icecream (Chocolate)"],      
+      lunch:["Methi Poori","Rice (Boiled & White)","Sambar","Aloo Shimla","Kabuli Channa Masala","Dal fry","Salad","Curd","Icecream"],      
       snacks:["Veg Cutlet","Sauce","Bread","Butter","Jam","Tea/Coffee"],
-      dinner:["Chapathi","Rice (White & Boiled)","TomatoRice","Aloo Mutter Masala","Rasam","Curd","Salad","Dal","Paneer Chilli"]
+      dinner:["Chapathi","Paneer Chilli","Aloo Mutter Masala","Tomato Rice","Rice (White & Boiled)","Dal","Rasam","Curd","Salad"]
     },
     Thursday:{
-      breakfast:["Onion Uthappam","Set Dosa","Chutney","Bread","Butter","Jam","Tea/Coffee","Milk With Bournvita","Fruits"],
-      lunch:["Chapathi","Rice (White & Boiled)","Mix Pulse Gravy","Dal Khichidi","Pakoda Kadi","Pickle","Papad"],
+      breakfast:["Onion Uthappam","Set Dosa","Chutney","Fruits","Bread","Butter","Jam","Tea/Coffee","Milk With Bournvita"],
+      lunch:["Chapathi","Mix Pulse Gravy","Kadi Pakoda","Dal Khichidi","Rice (White & Boiled)","Pickle","Papad"],
       snacks:["Hakka Noodels","Bread","Butter","Jam","Tea/Coffee"],
-      dinner:["Chapathi","Rice (White & Boiled)","Gobi dry","Dal Tadka","Kasrn","Black Chana Masala","Curd","Papad","Laddu"]
+      dinner:["Chapathi","Black Chana Masala","Gobi dry","Rice (White & Boiled)","Dal Tadka","Rasam","Curd","Papad","Laddu"]
     },
     Friday:{
-      breakfast:["Poha-Penuts","Chutney","Bread","Butter","Jam","Cornflakes","Tea/Coffee","Milk With Bournvita","Fruits"],
-      lunch:["Chapathi","Rice (White & Boiled)","Jeera Rice","Sambar","Mutter Palak Masala","Dal Tadka","Lauki Dry","Butter Milk","Pickle","Papad","Ice Cream"],
+      breakfast:["Poha-Penuts","Chutney","Fruits","Bread","Butter","Jam","Tea/Coffee","Milk With Bournvita"],
+      lunch:["Poori","Matar Palak Masala","Lauki Dry","Jeera Rice","Rice (White & Boiled)","Sambar","Dal Tadka","Butter Milk","Pickle","Ice Cream"],
       snacks:["Pav Bhaji","Bread","Butter","Jam","Tea/Coffee"],
-      dinner:["Chapathi","Rice","Veg Makhnwala","Cabbage Manchurian","Veg Fried Rice","Dal Fry","Curd","Salad"]
+      dinner:["Chapathi","Veg Makhanwala","Cabbage Manchurian","Veg Fried Rice","Rice","Dal Fry","Curd","Salad"]
     },
     Saturday:{
-      breakfast:["Aloo Paratha","Curd","Pickle","Bread","Butter","Jam","Tea/Coffee","Milk with Bournvita","Paneer Bhurji"],
-      lunch:["Chapathi","Rice (White & Boiled)","Vatana Gassi","Veg Kolahpuri","Masala","Dal Tadka","Lauki","Chana Dal Tadka"],
+      breakfast:["Aloo Paratha","Paneer Bhurji","Curd","Pickle","Bread","Butter","Jam","Tea/Coffee","Milk with Bournvita"],
+      lunch:["Chapathi","Aloo Tamatar Gravy","Veg Kolahpuri","Rice (White & Boiled)","Dal Tadka","Rasam","Curd","Papad","Salad"],
       snacks:["Bread Pakoda","Sauce","Bread","Butter","Jam","Tea/Coffee"],
-      dinner:["Chapathi","Rice (White & Boiled)","Veg Khurma","Jeera rice","Dal Palak","Rasam","Curd","Papad","Salad"]
+      dinner:["Chapathi","Baingan","Alsande Kalu","Jeera rice","Rice (White & Boiled)","Dal Palak","Rasam","Curd","Papad","Salad"]
     },
     Sunday:{
-      breakfast:["Masala Dosa","Set Dosa","Sambar","Chutney","Bread","Butter","Jam","Tea/Coffee","Milk With Bournvita","Fruits"],
-      lunch:["Chapathi","Rice (White & Boiled)","Aloo Bhendi","Sambar","Dal Fry","Soyabin Masala","Curd","Papad","Salad","Sewai Kheer"],
+      breakfast:["Masala Dosa","Set Dosa","Sambar","Chutney","Fruits","Bread","Butter","Jam","Tea/Coffee","Milk With Bournvita"],
+      lunch:["Chapathi","Aloo Bhindi","Soyabean Masala","Rice (White & Boiled)","Sambar","Dal Fry","Curd","Papad","Salad","Seviyan Kheer"],
       snacks:["Samosa","Chutney","Bread","Butter","Jam","Tea/Coffee"],
-      dinner:["Rice","Dal","Paneer Veg Biryani","Raitha","Fruits Custard"]
+      dinner:["Paneer Veg Biryani","Raitha","Fruits Custard","Rice","Dal"]
     },
   }
   useEffect(()=>{
