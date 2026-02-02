@@ -5,49 +5,317 @@ function App() {
   const [day,setDay] = useState(new Date().toLocaleDateString('en-US', { weekday: 'long' }))
   const [time,setTime] = useState()
   const messmenu = {
-    Monday:{
-      breakfast:["Idli","Vada","Chutney","Sambar","Banana","Bread","Butter","Jam","Tea/Coffee","Milk with Bournvita"],
-      lunch:["Chapati","Mix Pulses gravy","Cabbage dry","Rice (White & Boiled)","Dal Tadka","Sambar","Curd","Salad","Ice cream"],
-      snacks:["Vada Pav","Green Chutney","Bread","Butter","Jam","Tea/Coffee"],
-      dinner:["Chapati","Paneer Do Pyaza","Veg dry","Lemon Rice","Rice (white & Boiled)","Dal Fry","Rasam","Curd","Salad"]
-    },
-    Tuesday:{
-      breakfast:["Puri","Bhaji","Fruits","Bread","Butter","Jam","Tea/Coffee","Milk with Bournvita","Sprout"],
-      lunch:["Chapathi","Beetroot Palya","Rajma masala","Veg pulao","Rice (white & Boiled)","Dal","Sambar","Curd","Salad","Gulab Jamun"],
-      snacks:["Upma","Kesribath","Chutney","Bread","Butter","Jam","Tea/Coffee"],
-      dinner:["Chapathi","Mix Veg Curry","Akka Masoor Dry","Rice (White & Boiled)","Dal Fry","Rasam","Curd","Salad","Papad"]
-    },
-    Wednesday:{
-      breakfast:["Upma","Shira","Chutney","Bread","Butter","Jam","Tea/Coffee","Milk With Bournvita","Banana","Sprout"],      
-      lunch:["Methi Poori","Rice (Boiled & White)","Sambar","Aloo Shimla","Kabuli Channa Masala","Dal fry","Salad","Curd","Icecream"],      
-      snacks:["Veg Cutlet","Sauce","Bread","Butter","Jam","Tea/Coffee"],
-      dinner:["Chapathi","Paneer Chilli","Aloo Mutter Masala","Tomato Rice","Rice (White & Boiled)","Dal","Rasam","Curd","Salad"]
-    },
-    Thursday:{
-      breakfast:["Onion Uthappam","Set Dosa","Chutney","Fruits","Bread","Butter","Jam","Tea/Coffee","Milk With Bournvita"],
-      lunch:["Chapathi","Mix Pulse Gravy","Kadi Pakoda","Dal Khichidi","Rice (White & Boiled)","Pickle","Papad"],
-      snacks:["Hakka Noodels","Bread","Butter","Jam","Tea/Coffee"],
-      dinner:["Chapathi","Black Chana Masala","Gobi dry","Rice (White & Boiled)","Dal Tadka","Rasam","Curd","Papad","Laddu"]
-    },
-    Friday:{
-      breakfast:["Poha-Penuts","Chutney","Fruits","Bread","Butter","Jam","Tea/Coffee","Milk With Bournvita"],
-      lunch:["Poori","Matar Palak Masala","Lauki Dry","Jeera Rice","Rice (White & Boiled)","Sambar","Dal Tadka","Butter Milk","Pickle","Ice Cream"],
-      snacks:["Pav Bhaji","Bread","Butter","Jam","Tea/Coffee"],
-      dinner:["Chapathi","Veg Makhanwala","Cabbage Manchurian","Veg Fried Rice","Rice","Dal Fry","Curd","Salad"]
-    },
-    Saturday:{
-      breakfast:["Aloo Paratha","Paneer Bhurji","Curd","Pickle","Bread","Butter","Jam","Tea/Coffee","Milk with Bournvita"],
-      lunch:["Chapathi","Aloo Tamatar Gravy","Veg Kolahpuri","Rice (White & Boiled)","Dal Tadka","Rasam","Curd","Papad","Salad"],
-      snacks:["Bread Pakoda","Sauce","Bread","Butter","Jam","Tea/Coffee"],
-      dinner:["Chapathi","Baingan","Alsande Kalu","Jeera rice","Rice (White & Boiled)","Dal Palak","Rasam","Curd","Papad","Salad"]
-    },
-    Sunday:{
-      breakfast:["Masala Dosa","Set Dosa","Sambar","Chutney","Fruits","Bread","Butter","Jam","Tea/Coffee","Milk With Bournvita"],
-      lunch:["Chapathi","Aloo Bhindi","Soyabean Masala","Rice (White & Boiled)","Sambar","Dal Fry","Curd","Papad","Salad","Seviyan Kheer"],
-      snacks:["Samosa","Chutney","Bread","Butter","Jam","Tea/Coffee"],
-      dinner:["Paneer Veg Biryani","Raitha","Fruits Custard","Rice","Dal"]
-    },
+  Monday: {
+    breakfast: [
+      "Idli (3)",
+      "Vada (2)",
+      "Chutney",
+      "Sambar",
+      "Bread",
+      "Butter",
+      "Jam",
+      "Tea/Coffee",
+      "Cornflakes",
+      "Milk with Bournvita",
+      "Sprouts - Moong"
+    ],
+    lunch: [
+      "Wheat Chapati",
+      "Cabbage Dry",
+      "Mixed Pulses Gravy",
+      "Rice (White & Boiled)",
+      "Dal Tadka",
+      "Sambar",
+      "Curd",
+      "Salad",
+      "Ice Cream (Butterscotch)"
+    ],
+    snacks: [
+      "Dabeli (2)",
+      "Bread",
+      "Butter",
+      "Jam",
+      "Tea/Coffee"
+    ],
+    dinner: [
+      "Wheat Chapati",
+      "Paneer Do Pyaza",
+      "Veg Dry",
+      "Lemon Rice",
+      "Rice (White & Boiled)",
+      "Dal Makhni",
+      "Rasam",
+      "Curd",
+      "Banana",
+      "Salad"
+    ]
+  },
+
+  Tuesday: {
+    breakfast: [
+      "Poori",
+      "Bhaji",
+      "Bread",
+      "Butter",
+      "Jam",
+      "Tea/Coffee",
+      "Milk with Bournvita",
+      "Sprouts - Peanut"
+    ],
+    lunch: [
+      "Wheat Chapati",
+      "Beetroot Palya",
+      "Rajma Masala",
+      "Veg Pulao",
+      "Rice (White & Boiled)",
+      "Yellow Dal",
+      "Sambar",
+      "Curd",
+      "Salad",
+      "Gulab Jamun",
+      "Papad"
+    ],
+    snacks: [
+      "Bhel Puri",
+      "Bread",
+      "Butter",
+      "Jam",
+      "Tea/Coffee"
+    ],
+    dinner: [
+      "Wheat Chapati",
+      "Bhindi Fry",
+      "Parwal Gravy",
+      "Rice (White & Boiled)",
+      "Dal Fry",
+      "Rasam",
+      "Curd",
+      "Muskmelon",
+      "Salad"
+    ]
+  },
+
+  Wednesday: {
+    breakfast: [
+      "Upma",
+      "Shira",
+      "Chutney",
+      "Bread",
+      "Butter",
+      "Jam",
+      "Cornflakes",
+      "Tea/Coffee",
+      "Milk with Bournvita",
+      "Sprouts - Chana (Black/Kabuli)"
+    ],
+    lunch: [
+      "Methi Poori",
+      "Aloo Shimla",
+      "Kabuli Chana Masala",
+      "Rice (White & Boiled)",
+      "Sambar",
+      "Dal Fry",
+      "Chaas",
+      "Salad",
+      "Ice Cream (Chocolate)"
+    ],
+    snacks: [
+      "Dhokla",
+      "Bread",
+      "Butter",
+      "Jam",
+      "Tea/Coffee"
+    ],
+    dinner: [
+      "Wheat Chapati",
+      "Chilly Paneer",
+      "Aloo Matar Masala",
+      "Tomato Rice",
+      "Rice (White & Boiled)",
+      "Rasam",
+      "Curd",
+      "Dal",
+      "Banana",
+      "Salad"
+    ]
+  },
+
+  Thursday: {
+    breakfast: [
+      "Onion Uthappam (2)",
+      "Set Dosa",
+      "Chutney",
+      "Bread",
+      "Butter",
+      "Jam",
+      "Tea/Coffee",
+      "Milk with Bournvita",
+      "Sprouts - Moong"
+    ],
+    lunch: [
+      "Wheat Chapati",
+      "Kadhi Pakoda",
+      "White Chawali Masala",
+      "Khichdi",
+      "Rice (White & Boiled)",
+      "Sambar",
+      "Papad",
+      "Curd",
+      "Salad"
+    ],
+    snacks: [
+      "White Gravy Pasta / Vegetable Pasta",
+      "Bread",
+      "Butter",
+      "Jam",
+      "Tea/Coffee"
+    ],
+    dinner: [
+      "Wheat Chapati",
+      "Kabuli / Kala Chana Masala",
+      "Gobi Dry",
+      "Rice (White & Boiled)",
+      "Dal Tadka",
+      "Rasam",
+      "Curd",
+      "Papad",
+      "Boondi Laddoo",
+      "Papaya",
+      "Salad"
+    ]
+  },
+
+  Friday: {
+    breakfast: [
+      "Besan Chilla (2)",
+      "Chutney",
+      "Bread",
+      "Butter",
+      "Jam",
+      "Tea/Coffee",
+      "Cornflakes",
+      "Milk with Bournvita",
+      "Sprouts - Peanut"
+    ],
+    lunch: [
+      "Poori",
+      "Dum Aloo Gravy",
+      "Green Peas Dry",
+      "Jeera Rice",
+      "Rice (White & Boiled)",
+      "Sambar",
+      "Dal Tadka",
+      "Chaas",
+      "Pickle",
+      "Salad",
+      "Ice Cream (Special)"
+    ],
+    snacks: [
+      "Aloo Tikki Chat",
+      "Bread",
+      "Butter",
+      "Jam",
+      "Tea/Coffee"
+    ],
+    dinner: [
+      "Wheat Chapati",
+      "Kadhai Paneer",
+      "Soyabean Dry",
+      "Rice (White & Boiled)",
+      "Dal",
+      "Rasam",
+      "Curd",
+      "Banana",
+      "Salad"
+    ]
+  },
+
+  Saturday: {
+    breakfast: [
+      "Aloo Paratha (2)",
+      "Paneer Bhurji",
+      "Pickle",
+      "Curd",
+      "Tea/Coffee",
+      "Milk with Bournvita"
+    ],
+    lunch: [
+      "Wheat Chapati",
+      "Aloo Jeera",
+      "Corn Palak Gravy",
+      "Rice (White & Boiled)",
+      "Sambar",
+      "Chana Dal Tadka",
+      "Curd",
+      "Salad",
+      "Papad"
+    ],
+    snacks: [
+      "Onion Pakoda",
+      "Sauce",
+      "Bread",
+      "Butter",
+      "Jam",
+      "Tea/Coffee"
+    ],
+    dinner: [
+      "Wheat Chapati",
+      "Veg Makhanwala",
+      "Baigan Bhartha",
+      "Jeera Rice",
+      "Rice (White & Boiled)",
+      "Dal Fry",
+      "Rasam",
+      "Curd",
+      "Papad",
+      "Watermelon",
+      "Salad"
+    ]
+  },
+
+  Sunday: {
+    breakfast: [
+      "Masala Dosa (1)",
+      "Set Dosa",
+      "Chutney",
+      "Sambar",
+      "Bread",
+      "Butter",
+      "Jam",
+      "Tea/Coffee",
+      "Milk with Bournvita"
+    ],
+    lunch: [
+      "Wheat Chapati",
+      "Aloo Bhindi",
+      "Soyabean Masala",
+      "Rice (White & Boiled)",
+      "Dal Fry",
+      "Sambar",
+      "Curd",
+      "Papad",
+      "Salad",
+      "Seviyan Kheer"
+    ],
+    snacks: [
+      "Samosa",
+      "Green Chutney",
+      "Bread",
+      "Butter",
+      "Jam",
+      "Tea/Coffee"
+    ],
+    dinner: [
+      "Paneer Veg Biryani",
+      "Raitha",
+      "Rice (White & Boiled)",
+      "Dal",
+      "Rasam",
+      "Fruit Custard"
+    ]
   }
+};
+
   useEffect(()=>{
     const date = new Date()
     setDay(date.toLocaleDateString('en-US', { weekday: 'long' }));
